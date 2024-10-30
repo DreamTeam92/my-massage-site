@@ -35,3 +35,18 @@ function App() {
 
 
 import React, { useState } from 'react';
+
+import React, { useState } from 'react';
+
+const ToggleComponent = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setIsVisible(!isVisible)}>Toggle View</button>
+      {isVisible && <p>This content is toggled</p>}
+    </div>
+  );
+};
+
+export default ToggleComponent;

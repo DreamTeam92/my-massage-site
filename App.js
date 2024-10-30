@@ -16,3 +16,22 @@ function App() {
 }
 
 export default App;
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/services" element={<ServiceList />} />
+        {/* Add more routes as needed */}
+      </Routes>
+      <Footer />
+    </Router>
+  );
+}
+
+
+import React, { useState } from 'react';
